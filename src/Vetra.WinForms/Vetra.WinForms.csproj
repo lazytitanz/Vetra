@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>Vetra.WinForms</RootNamespace>
+    <Description>WinForms + WebView2 hosting, local asset mapping, and native Windows capabilities for Vetra.</Description>
+    <PackageId>Vetra.WinForms</PackageId>
+    <PackageTags>vetra;winforms;webview2;desktop</PackageTags>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vetra.Core\Vetra.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" />
+  </ItemGroup>
+
+  <!-- WebView2's package also ships WPF assemblies that trigger WindowsBase conflicts in WinForms-only apps. -->
+  <Target Name="RemoveWebView2WpfReference" BeforeTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <Reference Remove="@(Reference)" Condition="'%(Filename)' == 'Microsoft.Web.WebView2.Wpf'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)' == 'Microsoft.Web.WebView2.Wpf'" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Client\vetra.js" LogicalName="Vetra.WinForms.Client.vetra.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="build\Vetra.WinForms.targets" Pack="true" PackagePath="build\Vetra.WinForms.targets" />
+  </ItemGroup>
+
+</Project>

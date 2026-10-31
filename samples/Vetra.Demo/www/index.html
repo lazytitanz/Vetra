@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vetra Demo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="brand">Vetra</p>
+    <h1>Desktop bridge demo</h1>
+    <p class="lede">Exercise .NET commands, events, and native Windows capabilities from plain HTML and JavaScript.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Command invocation</h2>
+      <div class="row">
+        <input id="greetingName" type="text" value="Evan" />
+        <button id="btnGreeting" type="button">Get greeting</button>
+        <button id="btnTime" type="button">Get time</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Events</h2>
+      <p>Listening for <code>demo.heartbeat</code> from .NET.</p>
+      <pre id="eventLog" class="log"></pre>
+    </section>
+
+    <section>
+      <h2>Window</h2>
+      <div class="row">
+        <button data-window="minimize" type="button">Minimize</button>
+        <button data-window="maximize" type="button">Maximize</button>
+        <button data-window="restore" type="button">Restore</button>
+        <button id="btnWindowState" type="button">Get state</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Dialogs</h2>
+      <div class="row">
+        <button id="btnFolder" type="button">Open folder</button>
+        <button id="btnFile" type="button">Open file</button>
+        <button id="btnSave" type="button">Save file</button>
+        <button id="btnMessage" type="button">Message box</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Storage</h2>
+      <div class="row">
+        <input id="themeValue" type="text" value="dark" />
+        <button id="btnStorageSet" type="button">Set theme</button>
+        <button id="btnStorageGet" type="button">Get theme</button>
+        <button id="btnStorageRemove" type="button">Remove theme</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Application</h2>
+      <div class="row">
+        <button id="btnInfo" type="button">App info</button>
+        <button id="btnCaps" type="button">Capabilities</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Notifications &amp; tray</h2>
+      <div class="row">
+        <button id="btnNotify" type="button">Show notification</button>
+        <button id="btnTray" type="button">Configure tray</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Output</h2>
+      <pre id="output" class="log"></pre>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

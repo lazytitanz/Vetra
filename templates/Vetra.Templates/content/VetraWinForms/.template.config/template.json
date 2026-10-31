@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vetra Contributors",
+  "classifications": [ "Windows", "WinForms", "WebView2", "Desktop" ],
+  "identity": "Vetra.WinForms.CSharp",
+  "name": "Vetra WinForms App",
+  "shortName": "vetra",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "VetraApp",
+  "preferNameDirectory": true,
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net10.0-windows10.0.17763.0",
+          "description": ".NET 10 (Windows)"
+        }
+      ],
+      "defaultValue": "net10.0-windows10.0.17763.0",
+      "replaces": "net10.0-windows10.0.17763.0"
+    }
+  }
+}

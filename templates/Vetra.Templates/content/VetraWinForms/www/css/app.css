@@ -1,0 +1,57 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f3f7f4, #dfece4);
+  color: #173025;
+}
+
+main {
+  width: min(640px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.brand {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  margin: 0.4rem 0 0.75rem;
+  font-size: 1.8rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+}
+
+input,
+button {
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid #9bb5a6;
+}
+
+button {
+  background: #1f6b4a;
+  color: #fff;
+  border-color: #1f6b4a;
+  cursor: pointer;
+}
+
+pre {
+  padding: 0.85rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  white-space: pre-wrap;
+}

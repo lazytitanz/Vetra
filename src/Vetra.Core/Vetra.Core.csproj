@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Vetra</RootNamespace>
+    <Description>Host-agnostic communication protocol, command dispatch, and shared models for Vetra desktop apps.</Description>
+    <PackageId>Vetra.Core</PackageId>
+    <PackageTags>vetra;webview2;desktop;bridge</PackageTags>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+</Project>
